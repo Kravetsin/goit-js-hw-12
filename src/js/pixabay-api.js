@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-function getImagesByQuery(query) {
+function getImagesByQuery(query, page = 1) {
   const API_KEY = '51218817-9c6b1fab233f845d5e532ac94';
   const URL =
     'https://pixabay.com/api/?key=' +
