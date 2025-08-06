@@ -5,6 +5,8 @@ import {
   clearGallery,
   hideLoader,
   showLoader,
+  showLoadBtn,
+  hideLoadBtn,
 } from './js/render-functions.js';
 import getImagesByQuery from './js/pixabay-api.js';
 import 'simplelightbox/dist/simple-lightbox.min.css';
@@ -14,7 +16,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 const form = document.querySelector('.form');
 const input = form.elements['search-text'];
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async e => {
   e.preventDefault();
   const query = input.value.trim();
 
@@ -27,6 +29,7 @@ form.addEventListener('submit', e => {
   }
 
   showLoader();
+  hideLoadBtn();
   clearGallery();
 
   getImagesByQuery(query)

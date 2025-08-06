@@ -116,3 +116,26 @@ body {
 .gallery__item:hover .image__info {
   transform: translateY(0);
 }
+
+.load__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4e75ff;
+  border: none;
+  border-radius: 8px;
+  height: 40px;
+  width: 125px;
+  transition: background-color 250ms ease-in-out;
+}
+
+.load__button:hover,
+.load__button:focus {
+  background-color: #6c8cff;
+}

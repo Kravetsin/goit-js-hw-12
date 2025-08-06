@@ -50,3 +50,11 @@ export function hideLoader() {
     loader.classList.add('hidden');
   }
 }
+
+export function showLoadBtn() {
+  document.querySelector('.load__button').classList.remove('hidden');
+}
+
+export function hideLoadBtn() {
+  document.querySelector('.load__button').classList.add('hidden');
+}

@@ -2,14 +2,15 @@
 
 import axios from 'axios';
 
-function getImagesByQuery(query, page = 1) {
+async function getImagesByQuery(query, page = 1) {
   const API_KEY = '51218817-9c6b1fab233f845d5e532ac94';
   const URL =
     'https://pixabay.com/api/?key=' +
     API_KEY +
     '&q=' +
     encodeURIComponent(query) +
-    '&per_page=9' +
+    '&per_page=15' +
+    `&page=${page}` +
     '&image_type=photo' +
     '&orientation=horizontal' +
     '&safesearch=true';
