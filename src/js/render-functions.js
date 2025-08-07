@@ -51,10 +51,10 @@ export function hideLoader() {
   }
 }
 
-export function showLoadBtn() {
+export function showLoadMoreButton() {
   document.querySelector('.load__button').classList.remove('hidden');
 }
 
-export function hideLoadBtn() {
+export function hideLoadMoreButton() {
   document.querySelector('.load__button').classList.add('hidden');
 }
