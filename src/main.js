@@ -9,7 +9,6 @@ import {
   hideLoadMoreButton,
 } from './js/render-functions.js';
 import { getImagesByQuery } from './js/pixabay-api.js';
-import 'simplelightbox/dist/simple-lightbox.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -97,7 +96,7 @@ function scrollPage() {
     .getBoundingClientRect();
 
   window.scrollBy({
-    top: cardHeight * 3,
+    top: cardHeight * 2,
     behavior: 'smooth',
   });
 }
