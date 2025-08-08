@@ -55,7 +55,7 @@ async function fetchImages() {
     totalHits = data.totalHits;
 
     if (data.hits.length === 0) {
-      hideLoadBtn();
+      hideLoadMoreButton();
       iziToast.error({
         title: 'No results',
         message:
@@ -77,6 +77,10 @@ async function fetchImages() {
     } else {
       showLoadMoreButton();
     }
+
+    if (currentPage > 1) {
+      scrollPage();
+    }
   } catch (error) {
     iziToast.error({
       title: 'Error',
@@ -85,4 +89,15 @@ async function fetchImages() {
   } finally {
     hideLoader();
   }
+}
+
+function scrollPage() {
+  const { height: cardHeight } = document
+    .querySelector('.gallery__item')
+    .getBoundingClientRect();
+
+  window.scrollBy({
+    top: cardHeight * 3,
+    behavior: 'smooth',
+  });
 }
